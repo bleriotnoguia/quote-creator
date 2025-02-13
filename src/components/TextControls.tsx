@@ -27,7 +27,7 @@ export default function TextControls({ quote, onUpdate }: TextControlsProps) {
           Font Size
         </label>
         <div className="flex items-center space-x-2">
-          <Type size={16} />
+          <Type size={16} className="dark:text-white" />
           <input
             type="range"
             min="16"
@@ -36,7 +36,7 @@ export default function TextControls({ quote, onUpdate }: TextControlsProps) {
             onChange={(e) => onUpdate({ fontSize: Number(e.target.value) })}
             className="w-full"
           />
-          <span className="text-sm">{quote.fontSize}px</span>
+          <span className="text-sm dark:text-white">{quote.fontSize}px</span>
         </div>
       </div>
 
