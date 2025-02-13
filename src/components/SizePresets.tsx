@@ -1,5 +1,5 @@
-import React from 'react';
-import { socialPresets } from '../utils/socialPresets';
+import React from "react";
+import { socialPresets } from "../utils/socialPresets";
 
 interface SizePresetsProps {
   onSelect: (width: number, height: number) => void;
@@ -8,7 +8,7 @@ interface SizePresetsProps {
 export default function SizePresets({ onSelect }: SizePresetsProps) {
   return (
     <div className="space-y-4">
-      <label className="block text-sm font-medium text-gray-700">
+      <label className="block text-sm font-medium text-gray-700 dark:text-white">
         Size Presets
       </label>
       <div className="grid grid-cols-2 gap-2">

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Type, AlignLeft, AlignCenter, AlignRight } from 'lucide-react';
-import { Quote } from '../types';
+import React from "react";
+import { Type, AlignLeft, AlignCenter, AlignRight } from "lucide-react";
+import { Quote } from "../types";
 
 interface TextControlsProps {
   quote: Quote;
@@ -11,7 +11,7 @@ export default function TextControls({ quote, onUpdate }: TextControlsProps) {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
           Quote Text
         </label>
         <textarea
@@ -23,7 +23,7 @@ export default function TextControls({ quote, onUpdate }: TextControlsProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
           Font Size
         </label>
         <div className="flex items-center space-x-2">
@@ -41,21 +41,21 @@ export default function TextControls({ quote, onUpdate }: TextControlsProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
           Text Alignment
         </label>
         <div className="flex space-x-2">
-          {(['left', 'center', 'right'] as const).map((align) => (
+          {(["left", "center", "right"] as const).map((align) => (
             <button
               key={align}
               onClick={() => onUpdate({ textAlign: align })}
               className={`p-2 rounded ${
-                quote.textAlign === align ? 'bg-blue-100' : 'bg-gray-100'
+                quote.textAlign === align ? "bg-blue-100" : "bg-gray-100"
               }`}
             >
-              {align === 'left' && <AlignLeft size={16} />}
-              {align === 'center' && <AlignCenter size={16} />}
-              {align === 'right' && <AlignRight size={16} />}
+              {align === "left" && <AlignLeft size={16} />}
+              {align === "center" && <AlignCenter size={16} />}
+              {align === "right" && <AlignRight size={16} />}
             </button>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CustomSizeInputProps {
   width: number;
@@ -6,13 +6,21 @@ interface CustomSizeInputProps {
   onSizeChange: (width: number, height: number) => void;
 }
 
-export default function CustomSizeInput({ width, height, onSizeChange }: CustomSizeInputProps) {
+export default function CustomSizeInput({
+  width,
+  height,
+  onSizeChange,
+}: CustomSizeInputProps) {
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700">Custom Size</label>
+      <label className="block text-sm font-medium text-gray-700 dark:text-white">
+        Custom Size
+      </label>
       <div className="flex gap-2">
         <div className="flex-1">
-          <label className="text-xs text-gray-600">Width (px)</label>
+          <label className="text-xs text-gray-600 dark:text-gray-100">
+            Width (px)
+          </label>
           <input
             type="number"
             min="100"
@@ -23,7 +31,9 @@ export default function CustomSizeInput({ width, height, onSizeChange }: CustomS
           />
         </div>
         <div className="flex-1">
-          <label className="text-xs text-gray-600">Height (px)</label>
+          <label className="text-xs text-gray-600 dark:text-gray-100">
+            Height (px)
+          </label>
           <input
             type="number"
             min="100"

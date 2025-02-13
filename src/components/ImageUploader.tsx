@@ -1,13 +1,16 @@
-import React, { useRef } from 'react';
-import { Upload, Image as ImageIcon } from 'lucide-react';
-import { handleImageUpload } from '../utils/imageUpload';
+import React, { useRef } from "react";
+import { Upload, Image as ImageIcon } from "lucide-react";
+import { handleImageUpload } from "../utils/imageUpload";
 
 interface ImageUploaderProps {
   onImageSelect: (imageUrl: string) => void;
   onShowImageSearch: () => void;
 }
 
-export default function ImageUploader({ onImageSelect, onShowImageSearch }: ImageUploaderProps) {
+export default function ImageUploader({
+  onImageSelect,
+  onShowImageSearch,
+}: ImageUploaderProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,14 +20,14 @@ export default function ImageUploader({ onImageSelect, onShowImageSearch }: Imag
         const imageUrl = await handleImageUpload(file);
         onImageSelect(imageUrl);
       } catch (error) {
-        console.error('Error uploading image:', error);
+        console.error("Error uploading image:", error);
       }
     }
   };
 
   return (
     <div className="space-y-4">
-      <label className="block text-sm font-medium text-gray-700 mb-2">
+      <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
         Background
       </label>
       <div className="flex gap-2">

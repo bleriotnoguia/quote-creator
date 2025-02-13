@@ -1,5 +1,5 @@
-import React from 'react';
-import { Quote } from '../types';
+import React from "react";
+import { Quote } from "../types";
 
 interface FontControlsProps {
   quote: Quote;
@@ -7,18 +7,18 @@ interface FontControlsProps {
 }
 
 export const fontFamilies = [
-  'Inter',
-  'Playfair Display',
-  'Montserrat',
-  'Roboto',
-  'Open Sans',
+  "Inter",
+  "Playfair Display",
+  "Montserrat",
+  "Roboto",
+  "Open Sans",
 ];
 
 export default function FontControls({ quote, onUpdate }: FontControlsProps) {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
           Font Family
         </label>
         <select
@@ -35,7 +35,7 @@ export default function FontControls({ quote, onUpdate }: FontControlsProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
           Text Color
         </label>
         <input
@@ -47,7 +47,7 @@ export default function FontControls({ quote, onUpdate }: FontControlsProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
           Text Opacity
         </label>
         <input
